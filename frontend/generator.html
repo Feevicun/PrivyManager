@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Password Manager</title>
+    <link rel="stylesheet" href="css/generator.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="lock-and-title">
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="lock" class="lock-image">
+                <div class="title-text">
+                    <h2 class="privy-title">Privy</h2>
+                    <h3 class="manager-title">Manager</h3>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="divider"></li>
+                <li><a href="main.html">
+                    <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/home--v1.png" alt="home--v1"/>
+                    <span>Main</span>
+                </a></li>
+                <li>
+                    <a href="#">
+                        <img width="20" height="20" src="https://img.icons8.com/sf-regular/48/folder-invoices.png" alt="folder-invoices"/>
+                        <span>All Entries</span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="active"><a href="account.html">
+                            <img width="20" height="20" src="https://img.icons8.com/windows/32/user-male-circle.png" alt="user-male-circle"/>
+                            <span> Accounts</span>
+                        </a></li>
+                        <li class="active"><a href="card.html">
+                            <img width="20" height="20" src="https://img.icons8.com/ios/50/bank-card-back-side--v1.png" alt="bank-card-back-side--v1"/>
+                            <span> Bank cards </span>
+                        </a></li>
+                        <li class="active"><a href="doc.html">
+                            <img width="20" height="20" src="https://img.icons8.com/metro/26/document.png" alt="document"/>
+                            <span> Documents </span>
+                        </a></li>
+                        <li class="active"><a href="address.html">
+                            <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/address.png" alt="address"/>
+                            <span> Address </span>
+                        </a></li>
+                        <li class="active"><a href="notes.html">
+                            <img width="20" height="20" src="https://img.icons8.com/ios/50/moleskine.png" alt="moleskine"/>
+                            <span>  Notes </span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-key-technology-prettycons-lineal-prettycons.png" alt="external-key-technology-prettycons-lineal-prettycons"/>
+                    <span>Password Check</span>
+
+                    </a></li>
+                <li><a href="generator.html">
+                    <img width="20" height="20" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-key-internet-security-flatart-icons-outline-flatarticons.png" alt="external-key-internet-security-flatart-icons-outline-flatarticons"/>
+                    <span>Password Generator</span>
+                </a></li>
+
+                <li><a href="bin.html">
+                    <img width="20" height="20" src="https://img.icons8.com/dotty/80/recycle-bin.png" alt="recycle-bin"/>
+                    <span>Bin</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+        <p>Generator</p>
+        <div class="header-content">
+        </div>
+        <div class="header-rectangle" id="password-container"></div>
+
+        <div class="pass-form" id="pass-form">
+            <p>What would you like to generate?</p>
+            <div class="pwd-user">
+                <input type="radio" id="password" name="gen-type">
+                <label for="password">Password</label>
+                <input type="radio" id="username" name="gen-type">
+                <label for="username">Username</label>
+            </div>
+            
+            <p>Password type</p>
+            <div class="pwd-user">
+                <input type="radio" id="type-pwd" name="pwd-type">
+                <label for="type-pwd">Password</label>
+                <input type="radio" id="passphrase" name="pwd-type">
+                <label for="passphrase">Passphrase</label>
+            </div>
+            
+            <div class="pwd-user" id="passwordOptions">
+                <p>Length</p>
+                <input type="number" id="length" name="length">
+                <p>Max password length</p>
+                <input type="text" id="min-length" name="min-length">
+                <p>Minimum numbers</p>
+                <input type="number" id="min-num" name="min-num">
+                <p>Minimum special</p>
+                <input type="number" id="min-spec" name="min-spec">
+            </div>
+        
+
+
+            <div class="options" id="password-options">
+                <p>Options</p>
+                <div class="pwd-users">
+                    <label><input type="checkbox" id="large" name="large"> A-Z</label>
+                    <label><input type="checkbox" id="small" name="small"> a-z</label>
+                    <label><input type="checkbox" id="num" name="num"> 0-9</label>
+                    <label><input type="checkbox" id="special" name="special"> !@#$%^&*</label>
+                    <label><input type="checkbox" id="characters" name="characters"> Avoid ambiguous characters</label>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button id="regenerate" class="Regenerate">
+                    <span>Generate password</span>
+                </button>
+                <button id="copy" class="Copy">
+                    <span>Copy password</span>
+                </button>
+                <button id="history" class="history">
+                <img width="20" height="20" src="https://img.icons8.com/ios/50/activity-history.png" alt="activity-history"/>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="passphrase-form" id="passphrase-form" style="display: none;">
+            <p>What would you like to generate?</p>
+            <div class="pwd-user">
+                <input type="radio" id="password" name="gen-type">
+                <label for="password">Password</label>
+                <input type="radio" id="username" name="gen-type">
+                <label for="username">Username</label>
+            </div>
+            
+            <p>Password type</p>
+            <div class="pwd-user">
+                <input type="radio" id="type-pwd" name="pwd-type">
+                <label for="type-pwd">Password</label>
+                <input type="radio" id="passphrase" name="pwd-type">
+                <label for="passphrase">Passphrase</label>
+            </div>
+            
+            
+            <!-- Inside the passphrase-form -->
+<div id="passphraseOptionsFields" class="pwd-user">
+    <p>Number of words</p>
+    <input type="number" id="num-words-fields" name="num-words-fields">
+    <p>Word separator</p>
+    <input type="text" id="word-separator-fields" name="word-separator-fields">
+</div>
+
+
+
+            <div class="options" id="passphrase-options">
+                <p>Options</p>
+                <div class="pwd-users">
+                    <label><input type="checkbox" id="capitalise" name="capitalise"> Capitalise</label>
+                    <label><input type="checkbox" id="inc-num" name="inc-num">Include number</label>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button id="regeneratepas" class="Regenerate">
+                    <span>Generate passphrase</span>
+                </button>
+                <button id="copypas" class="Copy">
+                    <span>Copy passphrase</span>
+                </button>
+                <button id="history" class="history">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/activity-history.png" alt="activity-history"/>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="username-form" id="username-form" style="display: none;">
+            <p>What would you like to generate?</p>
+            <div class="pwd-user">
+                <input type="radio" id="password" name="gen-type">
+                <label for="password">Password</label>
+                <input type="radio" id="username" name="gen-type">
+                <label for="username">Username</label>
+            </div>
+        
+            <div class="usernames">
+                <p>Username type</p>
+                <input type="radio" id="email" name="gen-type">
+                <label for="email">Plus addressed email</label>
+                <input type="radio" id="catch-all" name="gen-type">
+                <label for="catch-all">Catch-all email</label>
+                <input type="radio" id="random" name="gen-type">
+                <label for="random">Random word</label>
+            </div>
+        
+            <div class="em-address" id="em-address" style="display: none;">
+                <p>Email address</p>
+                <input type="text" id="address" name="address">
+            </div>
+        
+            <div class="dom-name" id="dom-name" style="display: none;">
+                <p>Domain name</p>
+                <input type="text" id="domain" name="domain">
+            </div>
+        
+            <div class="options" id="usernameOptions" style="display: none;">
+                <p>Options</p>
+                <div class="pwds-users">
+                    <label><input type="checkbox" id="capitalise" name="capitalise"> Capitalise</label>
+                    <label><input type="checkbox" id="inc-num" name="inc-num"> Include number</label>
+                </div>
+            </div>
+        
+            <div class="buttons">
+                <button id="regenerate-username" class="Regenerate">
+                    <span>Generate username</span>
+                </button>
+                <button id="copy" class="Copy">
+                    <span>Copy username</span>
+                </button>
+                <button id="history" class="history">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/activity-history.png" alt="activity-history" />
+                </button>
+            </div>
+        </div>
+        
+
+    </div>
+
+        <div class="user-icon">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="user-menu" style="display: none;">
+            <ul>
+                <li><a href="settings.html">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/apple-settings.png" alt="apple-settings"/>
+                    <span>Settings</span>
+                </a></li>
+                <li><a href="contact form/contact.html">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/call-me.png" alt="call-me"/>
+                    <span>Contact</span>
+                </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/lock.png" alt="lock"/>
+                    <span>Lock now</span>
+                </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/windows/32/exit.png" alt="exit"/>
+                    <span>Log out</span>
+                </a></li>
+            </ul>
+            </div>
+
+        </div> 
+    
+    <script src="js/generator.js"></script>
+
+</body>
+</html>

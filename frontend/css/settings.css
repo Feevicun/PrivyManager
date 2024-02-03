@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    background-color: #101113;
+    flex-wrap: nowrap; 
+    overflow: hidden;
+}
+
+
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 97vh;
+    background-color: #191C1F;
+    color: #fff;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.header p{
+    margin-left: 15px;
+    font-size: xx-large;
+    
+}
+
+
+
+/* Стилі для списку у меню */
+/* Updated Styles for the Menu */
+.add-menu {
+    display: none;
+    position: absolute;
+    background-color: #101113;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 14px;
+    width: 150px; /* Adjust the width as needed */
+}
+
+.add-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.add-menu ul li {
+    padding: 8px 0;
+}
+
+.add-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+
+.add-menu ul li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+/* Відступ для окремих пунктів */
+.menu ul li:nth-child(2) a { /* Для другого пункту */
+    padding-bottom: 5px; /* Збільшити відступ знизу */
+}
+
+.menu ul li:nth-child(3) a { /* Для третього пункту */
+    padding-bottom: 5px; /* Збільшити відступ знизу */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 6px;
+    margin: 15px;
+    margin-left: 1px;
+}
+
+.menu ul li {
+    padding: 10px 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+}
+
+.menu ul li.divider {
+    padding: 0;
+    margin: 1px;
+    border-bottom: 1px solid #c5bcb2;
+    width: 86%;
+    margin-left: 14px;
+}
+
+
+.menu ul li a img {
+    width: 15px;
+    height: 15px;
+    filter: brightness(0) invert(1); /* Make icons white */
+    margin-right: 5px;
+    
+}
+/* Header Styles */
+.header {
+    padding: 15px 30px;
+    color: #fff;
+    position: relative;
+    width: 70%; /* Make the header span the entire width */
+    box-sizing: border-box; /* Include padding in the width */
+    margin-bottom: 20px;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1100px;
+    border-bottom: 1px solid #c5bcb2;
+    margin-bottom: 740px;
+    margin-left: 40px;
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* Submenu Styles */
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #101113;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-left: 150px; /* Adjust the margin as needed */
+    width: 120px;
+    font-size: small;
+}
+
+.sub-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-menu ul li {
+    padding: 8px 0;
+}
+
+.sub-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.sub-menu ul li a img {
+    width: 15px; /* Adjust the icon size as needed */
+    height: 15px; /* Adjust the icon size as needed */
+    margin-right: 8px;
+    filter: brightness(0) invert(1); /* Make icons white */
+}
+
+
+
+
+
+.user-icon {
+    position: fixed;
+    top: 65px;
+    right: 50px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.user-menu{
+    display: none;
+    position: absolute;
+    background-color: #101113;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    margin-top: 130px;
+    margin-left: 90%;
+    width: 130px;
+    font-size: small;
+}
+.user-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-menu ul li {
+    padding: 8px 0;
+}
+
+.user-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+
+.user-menu ul li a img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1); 
+}
+
+
+.lock-and-title {
+    display: flex;
+    align-items: center;
+    margin-right: 160px; 
+}
+
+.lock-image {
+    filter: invert(43%) sepia(96%) saturate(364%) hue-rotate(352deg) brightness(100%) contrast(80%); /* Orange color filter */
+    margin-right: 10px; 
+    width: 50px; 
+    height: auto; 
+}
+
+.lock-and-title .lock-image {
+    order: -1; 
+}
+
+.lock-and-title h2, .lock-and-title h3 {
+    margin: 0; 
+    line-height: 1.2; 
+    white-space: nowrap; 
+}
+
+.privy-title {
+    color: #ff971D;
+    display: block;
+}
+
+.manager-title{
+    color: #fff;
+    display: block;
+}
+
+
+label {
+    color: #fff !important;
+}
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    width: 850px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 200px;
+    height: 500px;
+    margin-right: 250px;
+}
+
+
+
+.photo-section {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 70px;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+.photo-container {
+    margin-top: 20px;
+}
+
+.upload-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.upload-label img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+#photo-upload {
+    display: none;
+}
+
+.select-box{
+    width: 160px;
+}
+
+.form-section,
+.form1 {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.input-box {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-box .upload-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input-box .upload-label img {
+    width: 50px;
+    height: 50px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.input-box input,
+.input-box select {
+    width: 280px;
+    padding: 10px;
+    border: 1px solid #8e94a5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #2C2F33;
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    outline: none;
+    border-color: #ff971D;
+}
+
+.input-box input[type="date"] {
+    padding: 10px;
+}
+
+.input-box input::placeholder,
+.input-box select::placeholder {
+    color: #8e94a5;
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column .input-box {
+    flex: 1;
+}
+
+.column .input-box:first-child {
+    margin-right: 10px;
+}
+
+.gender-box {
+    margin-bottom: 15px;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+}
+
+.select-gender select {
+    margin-left: 10px;
+    padding: 8px;
+    background-color: #4a4e61;
+    color: #fff;
+    border: 1px solid #8e94a5;
+    border-radius: 4px;
+}
+
+
+.input-box.address input[type="text"],
+.input-box.address input[type="number"] {
+    width: 100%;
+}
+
+.input-box.address .column {
+    display: flex;
+}
+
+.input-box.address .column .input-box {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.input-box.address .column select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.address {
+    margin-top: 15px;
+    width: 280px;
+}
+
+button {
+    background-color: #ff971D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f38910;
+    transform: scale(1.05);
+}
+
+
+
+
+.change-pass-form{
+    width: 900px; 
+    border-radius: 8px;
+    margin-top: 200px;
+    height: 500px;
+    margin-right: 75px;
+}
+
+.pass{
+margin-left: 10px;
+margin-top: 10px;
+}
+
+.pass-btn{
+    margin-left: 80px;
+}
+
+
+.delete-account-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 400px;
+    margin-top: 250px;
+    color: #fff;
+}
+
+.delete-account-form {
+    width: 450px; /* Adjust the width as needed */
+    border-radius: 8px;
+    color: #fff;
+}
+
+.message {
+    display: none;
+    background-color: #2C2F33;
+    border-radius: 8px;
+    border: 1px solid #8e94a5;
+    padding: 15px;
+    width: 450px; 
+    height: 330px;
+    box-sizing: border-box; 
+    margin-right: 120px;
+    margin: 25px;
+}
+
+.main-form{
+    color: #fff;
+    margin-top: 170px;
+    width: 700px;
+}

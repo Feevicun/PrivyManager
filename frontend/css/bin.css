@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    background-color: #101113;
+    flex-wrap: nowrap; 
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 97vh;
+    background-color: #191C1F;
+    color: #fff;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.create-new {
+    position: relative;
+}
+
+.add {
+    margin-left: auto; 
+    margin-right: 205px; 
+    cursor: pointer;
+    color: #101113;
+}
+
+
+.add-folder {
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: #101113;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.create-btn {
+    height: 30px;
+    width: 100px;
+    border: none;
+    background-color: #101113;
+    color: #191C1F;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.create-btn img {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+    margin-left: 7px; 
+}
+
+
+.dark {
+    background-color: #444;
+}
+
+.orange {
+    background-color: #ff971D;
+}
+
+.header p{
+    margin-left: 15px;
+}
+
+.create-new-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #444;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.create-new-menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+/* Відступ для окремих пунктів */
+.menu ul li:nth-child(2) a { /* Для другого пункту */
+    padding-bottom: 5px; /* Збільшити відступ знизу */
+}
+
+.menu ul li:nth-child(3) a { /* Для третього пункту */
+    padding-bottom: 5px; /* Збільшити відступ знизу */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 6px;
+    margin: 15px;
+    margin-left: 1px;
+}
+
+.menu ul li {
+    padding: 10px 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+}
+
+.menu ul li.divider {
+    padding: 0;
+    margin: 1px;
+    border-bottom: 1px solid #c5bcb2;
+    width: 86%;
+    margin-left: 14px;
+}
+
+
+.menu ul li a img {
+    width: 15px;
+    height: 15px;
+    filter: brightness(0) invert(1); /* Make icons white */
+    margin-right: 5px;
+    
+}
+/* Header Styles */
+.header {
+    padding: 15px 30px;
+    color: #fff;
+    position: relative;
+    width: 70%; /* Make the header span the entire width */
+    box-sizing: border-box; /* Include padding in the width */
+    margin-bottom: 20px;
+}
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1100px;
+    border-bottom: 1px solid #c5bcb2;
+    margin-bottom: 672px;
+    margin-left: 40px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    margin-right: 130px;
+    border: 1px solid #c5bcb2;
+    border-radius: 15px;
+
+}
+
+.search-box img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    filter: brightness(0) invert(1); /* To make the icon white */
+}
+
+.search-box input[type="text"] {
+    width: calc(100% - 30px);
+    padding-left: 5px;
+    border-radius: 15px;
+    height: 25px;
+    background-color: #101113;
+    border: none;
+    color: white;
+
+}
+
+.categories img{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    filter: brightness(0) invert(1);
+}
+
+.user-icon {
+    position: fixed;
+    top: 65px;
+    right: 50px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+.middle-section img {
+    width: 220px;
+    height: auto;
+    margin-top: 25%;
+    margin-right: 450%;
+}
+
+.middle-section p{
+    width: 240%; /* Adjust the width as needed */
+    margin-right: 450%;
+}
+
+.second{
+    color:#858282;
+    margin:7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 450%;
+    background-color: #101113;
+}
+
+.create img {
+    height: 17px;
+    width: 17px;
+    margin: 0 3px;
+    margin-right: 5px;
+    margin-left: 7px;
+}
+
+
+
+/* Text Row Styles */
+.text-row {
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+    width: 100%;
+    padding: 25px 30px;
+    color: #fff;
+
+}
+
+.text-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 600px;
+    font-size: small;
+}
+
+
+
+/* Categories Button Styles */
+.categories {
+    border-radius: 7px;
+    background-color: #c4c4c4;
+    padding: 3px 25px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.categories:hover {
+    background-color:#101113;
+}
+
+.categories img {
+    margin-top: 3px;
+}
+
+/* Main Section Styles */
+.main-section {
+    padding: 20px;
+    color: #fff;
+}
+
+.line {
+    border-bottom: 1px solid #c5bcb2;
+    width: calc(100% - 60px); /* Adjust the width according to your layout */
+    margin: 0 auto;
+}
+
+/* Apply the "line" class to the elements where you want the line to appear */
+.button-line {
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+
+
+
+.lock-and-title {
+    display: flex;
+    align-items: center;
+    margin-right: 160px; /* Adjust the margin as needed */
+}
+
+.lock-image {
+    filter: invert(43%) sepia(96%) saturate(364%) hue-rotate(352deg) brightness(100%) contrast(80%); /* Orange color filter */
+    margin-right: 10px; /* Adjust the margin between the lock icon and text */
+    width: 50px; /* Adjust the width of the lock icon */
+    height: auto; /* Ensure the height adjusts proportionally */
+}
+
+.lock-and-title .lock-image {
+    order: -1; /* Move the lock image to the left */
+}
+
+.lock-and-title h2, .lock-and-title h3 {
+    margin: 0; /* Reset margin */
+    line-height: 1.2; /* Adjust line height as needed */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.privy-title {
+    color: #ff971D;
+    display: block;
+}
+
+.manager-title{
+    color: #fff;
+    display: block;
+}
+
+.menu ul li a.active {
+    background-color: #ff971D;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .sidebar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .add {
+        margin-right: 0;
+    }
+
+    .create-btn {
+        width: 80px;
+        font-size: smaller;
+    }
+
+    .header {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header::after {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-box input[type="text"] {
+        width: 100%;
+    }
+
+    .text-row {
+        position: static;
+        padding: 10px;
+    }
+
+    .text-content {
+        margin-bottom: 0;
+    }
+
+    .user-icon {
+        position: static;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}

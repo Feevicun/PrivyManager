@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Register Form</header>
+      <form action="/register" class="form" method="POST" onsubmit="return validateForm()">
+
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" name="email" placeholder="Enter email address" required />
+        </div>
+
+        <div class="input-box">
+          <label>Password</label>
+          <input type="password" name="password" id="password" placeholder="Enter password" required />
+        </div>
+
+        <div class="input-box">
+          <label>Repeat Password</label>
+          <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat password" required />
+          <p id="passwordError" style="color: red; display: none;">Passwords do not match!</p>
+        </div>
+        
+        <button type="submit">Submit</button>
+
+        <div class="login-link">
+          <a href="login.html">Already have an account? Login</a>
+        </div>
+        <span id="generatedKey"></span>
+      </form>
+    </section>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>

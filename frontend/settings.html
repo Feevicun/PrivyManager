@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Password Manager</title>
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="lock-and-title">
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="lock" class="lock-image">
+                <div class="title-text">
+                    <h2 class="privy-title">Privy</h2>
+                    <h3 class="manager-title">Manager</h3>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="divider"></li>
+                <li><a href="main.html">
+                    <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/home--v1.png" alt="home--v1"/>
+                    <span>Main</span>
+                </a></li>
+                <li>
+                    <a href="#">
+                        <img width="20" height="20" src="https://img.icons8.com/sf-regular/48/folder-invoices.png" alt="folder-invoices"/>
+                        <span>All Entries</span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="active"><a href="account.html">
+                            <img width="20" height="20" src="https://img.icons8.com/windows/32/user-male-circle.png" alt="user-male-circle"/>
+                            <span> Accounts</span>
+                        </a></li>
+                        <li class="active"><a href="card.html">
+                            <img width="20" height="20" src="https://img.icons8.com/ios/50/bank-card-back-side--v1.png" alt="bank-card-back-side--v1"/>
+                            <span> Bank cards </span>
+                        </a></li>
+                        <li class="active"><a href="doc.html">
+                            <img width="20" height="20" src="https://img.icons8.com/metro/26/document.png" alt="document"/>
+                            <span> Documents </span>
+                        </a></li>
+                        <li class="active"><a href="address.html">
+                            <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/address.png" alt="address"/>
+                            <span> Address </span>
+                        </a></li>
+                        <li class="active"><a href="notes.html">
+                            <img width="20" height="20" src="https://img.icons8.com/ios/50/moleskine.png" alt="moleskine"/>
+                            <span>  Notes </span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-key-technology-prettycons-lineal-prettycons.png" alt="external-key-technology-prettycons-lineal-prettycons"/>
+                    <span>Password Check</span>
+
+                    </a></li>
+                <li><a href="generator.html">
+                    <img width="20" height="20" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-key-internet-security-flatart-icons-outline-flatarticons.png" alt="external-key-internet-security-flatart-icons-outline-flatarticons"/>
+                    <span>Password Generator</span>
+                </a></li>
+
+                <li><a href="bin.html">
+                    <img width="20" height="20" src="https://img.icons8.com/dotty/80/recycle-bin.png" alt="recycle-bin"/>
+                    <span>Bin</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+        <p>Settings</p>
+        </div>
+
+
+        <div class="user-icon">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="user-menu" style="display: none;">
+            <ul>
+                <li><a href="settings.html" id="settings-link">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/apple-settings.png" alt="apple-settings"/>
+                    <span>Settings</span>
+                </a>
+                <ul class="sub-menu" id="sub-menu">
+                  <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/edit-administrator.png" alt="edit-administrator"/>
+                    <span>Edit Acc</span>
+                  </a></li>
+                  <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/dotty/80/re-enter-pincode.png" alt="re-enter-pincode"/>
+                    <span>Change Pass</span>
+                  </a></li>
+                  <li><a href="#" id="delete-link">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/remove-user-male.png" alt="remove-user-male"/>
+                    <span>Delete Acc</span>
+                </a></li>
+                
+              </ul></li>
+                <li><a href="contact form/contact.html">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/call-me.png" alt="call-me"/>
+                    <span>Contact</span>
+                </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/lock.png" alt="lock"/>
+                    <span>Lock now</span>
+                </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/windows/32/exit.png" alt="exit"/>
+                    <span>Log out</span>
+                </a></li>
+            </ul>
+            </div>
+
+        </div> 
+
+
+
+<div class="main-form" style="display: none;">
+    <p>Welcome to settings to continue enter the code for your security!</p>
+    <div class="input-box delete-account">
+        <label>Enter Your Generated Code</label>
+        <input type="password" name="Generatedcode" placeholder="Enter your generated code" required />
+    </div>
+
+    <button class="pass pass-btn" type="submit">Submit</button>
+</div>
+
+
+        <div class="container" style="display: none;">
+          <div class="form-section">
+              <div class="input-box">
+                  <label>Full Name</label>
+                  <input type="text" name="fullName" placeholder="Enter full name" required />
+              </div>
+      
+              <div class="input-box">
+                  <label>Reserve Email Address</label>
+                  <input type="text" name="reserveEmail" placeholder="Enter email address" required />
+              </div>
+      
+              <div class="input-box address">
+                  <label>Address</label>
+                  <input type="text" name="streetAddress" placeholder="Enter street address" required />
+                  <input type="text" name="streetAddressLine2" placeholder="Enter street address line 2" required />
+                  <div class="column">
+                      <div class="select-box">
+                          <select name="country">
+                              <option hidden>Country</option>
+                              <option>America</option>
+                              <option>Japan</option>
+                              <option>India</option>
+                              <option>Nepal</option>
+                              <option>Ukraine</option>
+                              <option>Italy</option>
+                              <option>Germany</option>
+                              <option>Poland</option>
+                          </select>
+                      </div>
+                      <input type="text" name="city" placeholder="Enter your city" required />
+                  </div>
+                  <div class="column">
+                      <input type="text" name="region" placeholder="Enter your region" required />
+                      <input type="number" name="postalCode" placeholder="Enter postal code" required />
+                  </div>
+              </div>
+          </div>
+      
+          <div class="photo-section">
+              <div class="photo-container">
+                  <label for="photo-upload" class="upload-label">
+                      <img src="https://img.icons8.com/ios/50/000000/camera.png" alt="camera-icon"/>
+                      Upload photo
+                  </label>
+                  <input type="file" id="photo-upload" class="photo" accept="image/*">
+              </div>
+          </div>
+      
+          <div class="form1">
+              <div class="column">
+                  <div class="input-box">
+                      <label>Phone Number</label>
+                      <input type="number" name="phoneNumber" placeholder="Enter phone number" required />
+                      <label>Birth Date</label>
+                      <input type="date" name="birthDate" placeholder="Enter birth date" required />
+                  </div>
+              </div>
+      
+              <div class="gender-box">
+                  <div class="gender-option">
+                      <label for="gender-box">Gender</label>
+                      <div class="select-gender">
+                          <select name="gender" id="gender-box">
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="prefer-not-say">Prefer not to say</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+              <button>Save Changes</button>
+          </div>
+      </div>
+
+<!-- Add this within the <div class="change-pass"> section -->
+    <form class="change-pass-form">
+        <div class="input-box pass">
+            <label>Current Password</label>
+            <input type="password" name="currentPassword" placeholder="Enter current password" required />
+        </div>
+    
+        <div class="input-box pass">
+            <label>New Password</label>
+            <input type="password" name="newPassword" placeholder="Enter new password" required />
+        </div>
+    
+        <div class="input-box pass">
+            <label>Confirm New Password</label>
+            <input type="password" name="confirmNewPassword" placeholder="Confirm new password" required />
+        </div>
+
+        <div class="input-box pass">
+            <label>Generated Code</label>
+            <input type="password" name="generateCode" placeholder="Enter generated code" />
+        </div>
+    
+    
+        <button class="pass pass-btn" type="submit">Change Password</button>
+    </form>
+    
+
+
+
+
+    <div class="delete-account-container">
+    <form class="delete-account-form" style="display: none;">
+        <div class="confirmation-box">
+            <p>Are you sure you want to delete your account?</p>
+        </div>
+        <div class="input-box delete-account">
+            <label>Enter Your Full Name</label>
+            <input type="password" name="fullname" placeholder="Enter your full name" required />
+        </div>
+        <div class="input-box delete-account">
+            <label>Enter Your Password to Confirm</label>
+            <input type="password" name="confirmPassword" placeholder="Enter your password" required />
+        </div>
+        <div class="input-box delete-account">
+            <label>Enter Your Generated Code</label>
+            <input type="password" name="Generatedcode" placeholder="Enter your generated code" required />
+        </div>
+        
+        <button class="delete-account" type="submit">Delete Account</button>
+    </form>
+    
+
+
+    <div class="message" >
+        <p>If you are sure that you want to delete your account. You may want to return to your passwords, docs, notes, and delete any private notes, password, addresses then Empty the Trash to permanently delete these notes. (Or Privy Manager will automatically delete your information in 30 days.) Then, return to this page to complete the process. When your account is deleted, you will be logged out of Privy Manager, and this account will no longer be usable. You will not be able to create another Privy Manager account with your same email address.</p>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+      <script>
+    var userIcon = document.querySelector('.user-icon');
+    var userMenu = document.querySelector('.user-menu');
+    var container = document.querySelector('.container');
+    var message = document.querySelector('.message');
+    var deleteAccountForm = document.querySelector('.delete-account-form');
+    var changePassForm = document.querySelector('.change-pass-form');
+
+    // Event listener for clicking on the user icon to toggle user menu
+    userIcon.addEventListener('click', function () {
+        // Toggle the display of the user menu
+        userMenu.style.display = (userMenu.style.display === 'block') ? 'none' : 'block';
+    });
+
+    var settingsLink = document.getElementById('settings-link');
+    var subMenu = document.getElementById('sub-menu');
+
+    // Event listener for clicking on the Settings link to toggle sub-menu
+    settingsLink.addEventListener('click', function (event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Toggle the display of the sub-menu
+        subMenu.style.display = (subMenu.style.display === 'block') ? 'none' : 'block';
+    });
+
+    var editAccLink = document.querySelector('#sub-menu li:nth-child(1) a');
+    var changePassLink = document.querySelector('#sub-menu li:nth-child(2) a');
+    var deleteAccLink = document.querySelector('#sub-menu li:nth-child(3) a');
+
+    editAccLink.addEventListener('click', function () {
+        // Show the container for 'Edit Acc'
+        container.style.display = 'flex';
+        changePassForm.style.display = 'none'; // Hide change-pass-form
+        deleteAccountForm.style.display = 'none'; // Hide delete-account-form
+        message.style.display = 'none'; // Hide message
+    });
+
+    changePassLink.addEventListener('click', function () {
+        // Hide the container for 'Edit Acc' and display change-pass-form
+        container.style.display = 'none';
+        changePassForm.style.display = 'block';
+        deleteAccountForm.style.display = 'none'; // Hide delete-account-form
+        message.style.display = 'none'; // Hide message
+    });
+
+    deleteAccLink.addEventListener('click', function (event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Toggle the display of the delete-account-form only if it is not already displayed
+        if (deleteAccountForm.style.display !== 'block') {
+            deleteAccountForm.style.display = 'block';
+            message.style.display = 'block'; // Show message
+        } else {
+            deleteAccountForm.style.display = 'block';
+            message.style.display = 'block'; // Show message
+        }
+
+        // Hide other sections if needed
+        container.style.display = 'none';
+        changePassForm.style.display = 'none';
+    });
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector('.container');
+
+            const storedData = localStorage.getItem('userData');
+
+            if (storedData) {
+                const userData = JSON.parse(storedData);
+                updateContainer(userData);
+            }
+        });
+
+        function updateContainer(userData) {
+            // Your code to update the container based on the userData
+            const fullNameElement = document.querySelector('.container [name="fullName"]');
+            const reserveEmailElement = document.querySelector('.container [name="reserveEmail"]');
+            const phoneNumberElement = document.querySelector('.container [name="phoneNumber"]');
+            const birthDateElement = document.querySelector('.container [name="birthDate"]');
+            const genderElement = document.querySelector('.container [name="gender"]');
+
+            if (fullNameElement) fullNameElement.textContent = `Full Name: ${userData.fullName}`;
+            if (reserveEmailElement) reserveEmailElement.textContent = `Reserve Email: ${userData.reserveEmail}`;
+            if (phoneNumberElement) phoneNumberElement.textContent = `Phone Number: ${userData.phoneNumber}`;
+            if (birthDateElement) birthDateElement.textContent = `Birth Date: ${userData.birthDate}`;
+            if (genderElement) genderElement.textContent = `Gender: ${userData.gender}`;
+            // Update other elements as needed
+        }
+
+
+    </script>
+    
+</body>
+</html>

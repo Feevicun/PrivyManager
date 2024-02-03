@@ -1,0 +1,154 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #101113;
+  color:  #fff;
+  overflow-y: scroll; /* Дозволяє вертикальний скролінг */
+  overflow-x: hidden; /* Вимикає горизонтальний скролінг */
+}
+
+
+/* Задайте стилі бічного скролінгу за вашим бажанням */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff971D; /* Колір пальця скролінгу */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #101113; /* Колір фону скролінгу */
+}
+
+
+/* Contact section styles */
+.contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 20px; 
+}
+
+/* Form styles */
+.contact form {
+  width: 100%;
+  width: 670px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* Heading styles */
+.contact form h2 {
+  color: #ffffff;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+ }
+
+/* Input box styles */
+.contact form .input-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Input field styles */
+.contact form .input-field {
+  width: calc(50% - 20px);
+}
+
+.contact form .item {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  background: none;
+  border-bottom: 2px solid #3a3a3a;
+  color: #ffffff;
+}
+
+.contact form .item::placeholder {
+  color: #ffffff;
+}
+
+/* Textarea field styles */
+.contact form .textarea-field {
+  width: 100%;
+}
+
+.contact form textarea {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #a9a7a7;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  min-width: 100%;
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Error text styles */
+.contact form .error-txt {
+  display: none;
+  font-size: 14px;
+  color: #f00;
+  margin-top: 5px;
+}
+
+/* Submit button styles */
+.contact form button {
+  border: none;
+  background: #ff971D;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  color: #ffffff;
+  width: 170px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact form button:hover {
+  opacity: 0.9;
+}
+
+
+/* Hamburger menu */
+.container {
+  max-width: 1600px;
+  width: 90%;
+  margin: auto;
+}
+
+
+
+

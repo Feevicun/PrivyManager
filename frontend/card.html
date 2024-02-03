@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Password Manager</title>
+    <link rel="stylesheet" href="css/card.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+
+
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="lock-and-title">
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="lock" class="lock-image">
+                <div class="title-text">
+                    <h2 class="privy-title">Privy</h2>
+                    <h3 class="manager-title">Manager</h3>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="divider"></li>
+                <li><a href="main.html">
+                    <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/home--v1.png" alt="home--v1"/>
+                    <span>Main</span>
+                </a></li>
+                <li>
+                    <a href="#">
+                        <img width="20" height="20" src="https://img.icons8.com/sf-regular/48/folder-invoices.png" alt="folder-invoices"/>
+                        <span>All Entries</span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="active"><a href="account.html">
+                            <img width="20" height="20" src="https://img.icons8.com/windows/32/user-male-circle.png" alt="user-male-circle"/>
+                            <span> Accounts</span>
+                        </a></li>
+                        <li class="active"><a href="card.html">
+                            <img width="20" height="20" src="https://img.icons8.com/ios/50/bank-card-back-side--v1.png" alt="bank-card-back-side--v1"/>
+                            <span> Bank cards </span>
+                        </a></li>
+                        <li class="active"><a href="doc.html">
+                            <img width="20" height="20" src="https://img.icons8.com/metro/26/document.png" alt="document"/>
+                            <span> Documents </span>
+                        </a></li>
+                        <li class="active"><a href="address.html">
+                            <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/address.png" alt="address"/>
+                            <span> Address </span>
+                        </a></li>
+                        <li class="active"><a href="notes.html">
+                            <img width="20" height="20" src="https://img.icons8.com/ios/50/moleskine.png" alt="moleskine"/>
+                            <span>  Notes </span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li><a href="generator.html">
+                    <img width="20" height="20" src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-key-technology-prettycons-lineal-prettycons.png" alt="external-key-technology-prettycons-lineal-prettycons"/>
+                    <span>Password Check</span>
+
+                    </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-key-internet-security-flatart-icons-outline-flatarticons.png" alt="external-key-internet-security-flatart-icons-outline-flatarticons"/>
+                    <span>Password Generator</span>
+                </a></li>
+                <li><a href="bin.html">
+                    <img width="20" height="20" src="https://img.icons8.com/dotty/80/recycle-bin.png" alt="recycle-bin"/>
+                    <span>Bin</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+        <p>Bank Cards</p>
+        <div class="header-content">
+            <button id="createNewBtn" class="create-btn orange">
+                <img src="https://img.icons8.com/fluency-systems-regular/48/plus-math--v1.png" alt="plus-math--v1"/>
+                <span>Add</span>
+                <img  src="https://img.icons8.com/fluency-systems-regular/48/shift-down.png" alt="shift-down"/>
+            </button>
+
+
+            <div class="modal-background" id="modalBackground"></div>
+            <div id="myModalCard" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Add bank card</h2>
+                    <!-- Оновлена форма для банківської картки -->
+                    <form id="addCardForm">
+                        <div class="form-row">
+                            <label for="cardName">Name:</label>
+                            <input type="text" id="accountName" name="accountName" required>
+                            <label for="folder">Folder:</label>
+                            <select id="folder" name="folder">
+                                <option value="select">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label for="cardholderName">Cardholder name:</label>
+                            <input type="text" id="cardholderName" name="cardholderName" required>
+                            <label for="brand">Brand:</label>
+                            <select id="brand" name="brand">
+                                <!-- Опції для вибору бренду -->
+                                <option value="select">--Select--</option>
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">Mastercard</option>
+                                <option value="discover">Discover</option>
+                                <option value="american_express">American Express</option>
+                                <option value="unionpay">UnionPay</option>
+                                <option value="jcb">JCB</option>
+                                <option value="maestro">Maestro</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label for="cardNumber">Number:</label>
+                            <input type="text" id="cardNumber" name="cardNumber" required>
+                            <label for="expMonth">Expiration month:</label>
+                            <select id="expMonth" name="expMonth">
+                                <option value="month">--Select--</option>
+                                <option value="month">01</option>
+                                <option value="month">02</option> 
+                                <option value="month">03</option> 
+                                <option value="month">04</option> 
+                                <option value="month">05</option> 
+                                <option value="month">06</option> 
+                                <option value="month">07</option> 
+                                <option value="month">08</option> 
+                                <option value="month">09</option> 
+                                <option value="month">10</option> 
+                                <option value="month">11</option> 
+                                <option value="month">12</option> 
+                            </select>
+                            <label for="expYear">Expiration year:</label>
+                            <input type="text" id="expYear" name="expYear" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="securityCode">Security code (CVV):</label>
+                            <input type="password" id="securityCode" name="securityCode" required>
+                        </div>
+
+
+                        <div class="form-row">
+                            <label for="cardNotes">Notes:</label>
+                            <textarea id="cardNotes" name="cardNotes" rows="4" cols="50"></textarea>
+                        </div>
+                        <div class="options">
+                            <label for="masterPasswordReprompt">OPTIONS</label>
+                            <input type="checkbox" id="masterPasswordReprompt" name="masterPasswordReprompt">
+                            <span>Master password re-prompt</span>
+                        </div>
+                        <button type="submit">Add</button>
+                        <button type="cancel">Cancel</button>
+                    </form>
+                </div>
+            </div>
+            <div class="add">
+                <button id="addFolder" class="add-folder orange">
+                    <img width="15" height="15" src="https://img.icons8.com/external-inkubators-basic-outline-inkubators/32/external-add-folder-file-and-folder-inkubators-basic-outline-inkubators.png" alt="external-add-folder-file-and-folder-inkubators-basic-outline-inkubators"/>
+                </button>
+            </div>
+            <div class="search-box">
+                <img src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="search--v1">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="text-row">
+                <div class="text-content">
+                    <button id="categories" class="categories">Folders
+                        <img src="https://img.icons8.com/fluency-systems-regular/48/double-down.png" alt="double-down"/>
+                    </button>
+                </div>
+            </div>
+            <div class="folders-menu" style="display: none;"></div>
+        </div>
+        <div class="user-icon">
+            <img src="img/1.jpg" alt="">
+        </div>
+
+        <div class="user-menu" style="display: none;">
+            <ul>
+                <li><a href="settings.html">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/apple-settings.png" alt="apple-settings"/>
+                    <span>Settings</span>
+                </a></li>
+                <li><a href="contact form/contact.html">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/call-me.png" alt="call-me"/>
+                    <span>Contact</span>
+                </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/lock.png" alt="lock"/>
+                    <span>Lock now</span>
+                </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/windows/32/exit.png" alt="exit"/>
+                    <span>Log out</span>
+                </a></li>
+            </ul>
+            </div>
+            <div class="folmodal-background" id="folmodalBackground"></div>
+            <div id="folderModal" class="folmodal" style="display: none;">
+                <div class="modal-content">
+                    <span class="folclose">&times;</span>
+                    <h2>Add Folder</h2>
+                    <form id="addFolderForm">
+                        <div class="fol-form-row">
+                            <label for="accountName">Name</label>
+                            <input type="text" id="Name" name="Name" required>
+                        </div>
+                        <button class="folsubmit" type="submit">Add</button>
+                        <button class="folcancel" type="cancel">Cancel</button>
+                    </form>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="middle-section" id="middleSection">
+        <div class="middle" id="Middle">
+        <img src="img/free_icon_3.svg" class="notes" alt="spiral-bound-booklet--v1"/>
+        <p class="first" id="noAccountsMessage">You haven't added any accounts yet</p>
+        <p class="second" id="instructionMessage">Add a password and we will ensure its reliable security</p>
+        <button id="createBtn" class="create orange">
+            <img src="https://img.icons8.com/fluency-systems-regular/48/plus-math--v1.png" alt="plus-math--v1"/>
+            <span>Add</span>
+            <img src="https://img.icons8.com/fluency-systems-regular/48/shift-down.png" alt="shift-down"/>
+        </button>
+      </div>
+      <div id="containerWrapper" class="container">
+      </div>
+    </div>
+    <script src="js/card.js"></script>
+</body>
+</html>

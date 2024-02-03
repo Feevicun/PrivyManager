@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1.70666in" height="1.70666in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 1707 1707" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   
+    .fil0 {fill:url(#id0)}
+   
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="853.331" y1="0.19685" x2="853.331" y2="1706.46">
+   <stop offset="0" style="stop-opacity: 1; stop-color: rgb(255, 151, 29);" id="id_102"></stop>
+   <stop offset="0.490196" style="stop-opacity: 1; stop-color: rgb(196, 196, 196);" id="id_103"></stop>
+   <stop offset="1" style="stop-opacity: 1; stop-color: rgb(255, 255, 255);" id="id_104"></stop>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+  <path class="fil0" d="M1387 434l-1014 0 0 1198c0,13 11,25 25,25l964 0c14,0 25,-12 25,-25l0 -1198zm-292 156c0,-33 50,-33 50,0l0 911c-1,31 -50,32 -50,-1l0 -910zm-242 0c0,-33 50,-33 50,0l0 911c-2,31 -50,32 -50,-1l0 -910zm-242 0c0,-33 50,-33 50,0l0 911c-1,31 -50,32 -50,-1l0 -910zm-288 -156l-38 0c-36,0 -66,-30 -66,-65l0 -150c0,-34 30,-65 66,-65l396 0 0 -115c0,-22 15,-39 36,-39l269 0c21,0 36,17 36,39l0 115 399 0c36,0 67,31 67,65l0 149c0,31 -22,57 -51,65l0 1199c-5,41 -36,74 -78,74l-963 0c-40,0 -73,-33 -73,-73l0 -1199zm1098 -50c10,0 18,-8 18,-16l0 -149c0,-8 -8,-16 -18,-16 -378,0 -757,0 -1136,0 -9,0 -18,8 -18,16l0 149c0,8 9,16 18,16 379,0 758,0 1136,0zm-690 -230l244 0 0 -107 -244 0 0 107z" id="id_101"></path>
+ </g>
+</svg>

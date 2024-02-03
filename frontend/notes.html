@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Password Manager</title>
+    <link rel="stylesheet" href="css/notes.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+
+
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="lock-and-title">
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="lock" class="lock-image">
+                <div class="title-text">
+                    <h2 class="privy-title">Privy</h2>
+                    <h3 class="manager-title">Manager</h3>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="divider"></li>
+                <li><a href="main.html">
+                    <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/home--v1.png" alt="home--v1"/>
+                    <span>Main</span>
+                </a></li>
+                <li>
+                    <a href="#">
+                        <img width="20" height="20" src="https://img.icons8.com/sf-regular/48/folder-invoices.png" alt="folder-invoices"/>
+                        <span>All Entries</span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="active"><a href="account.html">
+                            <img width="20" height="20" src="https://img.icons8.com/windows/32/user-male-circle.png" alt="user-male-circle"/>
+                            <span> Accounts</span>
+                        </a></li>
+                        <li class="active"><a href="card.html">
+                            <img width="20" height="20" src="https://img.icons8.com/ios/50/bank-card-back-side--v1.png" alt="bank-card-back-side--v1"/>
+                            <span> Bank cards </span>
+                        </a></li>
+                        <li class="active"><a href="doc.html">
+                            <img width="20" height="20" src="https://img.icons8.com/metro/26/document.png" alt="document"/>
+                            <span> Documents </span>
+                        </a></li>
+                        <li class="active"><a href="address.html">
+                            <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/address.png" alt="address"/>
+                            <span> Address </span>
+                        </a></li>
+                        <li class="active"><a href="notes.html">
+                            <img width="20" height="20" src="https://img.icons8.com/ios/50/moleskine.png" alt="moleskine"/>
+                            <span>  Notes </span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/external-prettycons-lineal-prettycons/49/000000/external-key-technology-prettycons-lineal-prettycons.png" alt="external-key-technology-prettycons-lineal-prettycons"/>
+                    <span>Password Check</span>
+
+                    </a></li>
+                <li><a href="generator.html">
+                    <img width="20" height="20" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-key-internet-security-flatart-icons-outline-flatarticons.png" alt="external-key-internet-security-flatart-icons-outline-flatarticons"/>
+                    <span>Password Generator</span>
+                </a></li>
+                <li><a href="bin.html">
+                    <img width="20" height="20" src="https://img.icons8.com/dotty/80/recycle-bin.png" alt="recycle-bin"/>
+                    <span>Bin</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+        <p>Notes</p>
+        <div class="header-content">
+            <button id="createNewBtn" class="create-btn orange">
+                <img src="https://img.icons8.com/fluency-systems-regular/48/plus-math--v1.png" alt="plus-math--v1"/>
+                <span>Add</span>
+                <img  src="https://img.icons8.com/fluency-systems-regular/48/shift-down.png" alt="shift-down"/>
+            </button>
+
+   <!-- Модальне вікно для форми -->
+   <div class="modal-background" id="modalBackgroundNote"></div>
+   <div id="myModalNotes" class="modal">
+       <div class="modal-content">
+           <span class="close">&times;</span>
+           <h2>Add Note</h2>
+           <!-- Оновлений HTML код форми -->
+           <form id="addNoteForm">
+               <div class="form-row">
+                   <label for="accountName">Name:</label>
+                   <input type="text" id="accountName" name="accountName" required>
+                   <label for="folder">Folder:</label>
+                   <select id="folder" name="folder">
+                       <option value="Folder ">--Select--</option>
+                       <!-- Додайте інші опції за необхідності -->
+                   </select>
+               </div>
+               <div class="form-row">
+                   <label for="notes">Notes:</label>
+                   <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+               </div>
+               <div class="options">
+                   <label for="masterPasswordReprompt">OPTIONS</label>
+                   <input type="checkbox" id="masterPasswordReprompt" name="masterPasswordReprompt">
+                   <span>Master password re-prompt</span>
+               </div>
+               <button type="submit">Add</button>
+               <button type="cancel">Cancel</button>
+           </form>
+       </div>
+   </div>
+            <div class="add">
+                <button id="addFolder" class="add-folder orange">
+                    <img width="15" height="15" src="https://img.icons8.com/external-inkubators-basic-outline-inkubators/32/external-add-folder-file-and-folder-inkubators-basic-outline-inkubators.png" alt="external-add-folder-file-and-folder-inkubators-basic-outline-inkubators"/>
+                </button>
+            </div>
+            <div class="search-box">
+                <img src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="search--v1">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="text-row">
+                <div class="text-content">
+                    <button id="categories" class="categories">Folders
+                        <img src="https://img.icons8.com/fluency-systems-regular/48/double-down.png" alt="double-down"/>
+                    </button>
+                </div>
+            </div>
+            <div class="folders-menu" style="display: none;"></div>
+        </div>
+        <div class="user-icon">
+            <img src="img/1.jpg" alt="">
+        </div>
+
+        <div class="user-menu" style="display: none;">
+            <ul>
+                <li><a href="settings.html">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/apple-settings.png" alt="apple-settings"/>
+                    <span>Settings</span>
+                </a></li>
+                <li><a href="contact form/contact.html">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/call-me.png" alt="call-me"/>
+                    <span>Contact</span>
+                </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/ios/50/lock.png" alt="lock"/>
+                    <span>Lock now</span>
+                </a></li>
+                <li><a href="#">
+                    <img width="20" height="20" src="https://img.icons8.com/windows/32/exit.png" alt="exit"/>
+                    <span>Log out</span>
+                </a></li>
+            </ul>
+            </div>
+            <div class="folmodal-background" id="folmodalBackground"></div>
+            <div id="folderModal" class="folmodal" style="display: none;">
+                <div class="modal-content">
+                    <span class="folclose">&times;</span>
+                    <h2>Add Folder</h2>
+                    <form id="addFolderForm">
+                        <div class="fol-form-row">
+                            <label for="accountName">Name</label>
+                            <input type="text" id="Name" name="Name" required>
+                        </div>
+                        <button class="folsubmit" type="submit">Add</button>
+                        <button class="folcancel" type="cancel">Cancel</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="middle-section" id="middleSection">
+        <div class="middle" id="Middle">
+        <img src="img/free_icon_1.svg" class="notes" alt="spiral-bound-booklet--v1"/>
+        <p class="first" id="noAccountsMessage">You haven't added any accounts yet</p>
+        <p class="second" id="instructionMessage">Add a password and we will ensure its reliable security</p>
+        <button id="createBtn" class="create orange">
+            <img src="https://img.icons8.com/fluency-systems-regular/48/plus-math--v1.png" alt="plus-math--v1"/>
+            <span>Add</span>
+            <img src="https://img.icons8.com/fluency-systems-regular/48/shift-down.png" alt="shift-down"/>
+        </button>
+      </div>
+      <div id="containerWrapper" class="container">
+      </div>
+    </div>
+    <script src="js/notes.js"></script>
+</body>
+</html>

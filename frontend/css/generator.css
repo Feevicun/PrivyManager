@@ -1,0 +1,748 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    background-color: #101113;
+    flex-wrap: nowrap; 
+    overflow: hidden;
+}
+
+
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 97vh;
+    background-color: #191C1F;
+    color: #fff;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.header p{
+    margin-left: 15px;
+    font-size: xx-large;
+    
+}
+
+
+
+/* Стилі для списку у меню */
+/* Updated Styles for the Menu */
+.add-menu {
+    display: none;
+    position: absolute;
+    background-color: #101113;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 14px;
+    width: 150px; /* Adjust the width as needed */
+}
+
+.add-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.add-menu ul li {
+    padding: 8px 0;
+}
+
+.add-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+
+.add-menu ul li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+/* Відступ для окремих пунктів */
+.menu ul li:nth-child(2) a { /* Для другого пункту */
+    padding-bottom: 5px; /* Збільшити відступ знизу */
+}
+
+.menu ul li:nth-child(3) a { /* Для третього пункту */
+    padding-bottom: 5px; /* Збільшити відступ знизу */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 6px;
+    margin: 15px;
+    margin-left: 1px;
+}
+
+.menu ul li {
+    padding: 10px 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+}
+
+.menu ul li.divider {
+    padding: 0;
+    margin: 1px;
+    border-bottom: 1px solid #c5bcb2;
+    width: 86%;
+    margin-left: 14px;
+}
+
+
+.menu ul li a img {
+    width: 15px;
+    height: 15px;
+    filter: brightness(0) invert(1); /* Make icons white */
+    margin-right: 5px;
+    
+}
+/* Header Styles */
+.header {
+    padding: 15px 30px;
+    color: #fff;
+    position: relative;
+    width: 70%; /* Make the header span the entire width */
+    box-sizing: border-box; /* Include padding in the width */
+    margin-bottom: 20px;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1100px;
+    border-bottom: 1px solid #c5bcb2;
+    margin-bottom: 740px;
+    margin-left: 40px;
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header-rectangle{
+    width: 750px;
+    height: 60px;
+    border: 1px solid #fff;
+    background-color: #101113;
+    margin-left: 180px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+/*PASSWORD FORM*/
+
+.pass-form,
+.passphrase-form{
+    font-size: small; /* Adjust the font size for the form */
+    background-color: #26282B;
+    padding: 10px; /* Reduce padding */
+    border-radius: 8px;
+    margin: 20px;
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 180px;
+}
+
+.pass-form .pwd-user{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.pass-form .pwd-user p {
+    flex: 0 0 calc(33.33% - 10px);
+    margin-right: 5px;
+}
+.pass-form .pwd-user input {
+    flex: 1;
+    width: 100%;
+    margin-right: 15px;
+    margin-top: 8px;
+}
+
+.pass-form .pwd-user label {
+    flex: 1; 
+    margin-right: 5px; 
+    cursor: pointer;
+    font-size: x-small; 
+}
+
+/* Add this style for the options */
+.pass-form .options {
+    margin-bottom: 20px;
+}
+
+.pass-form .pwd-users {
+    display: flex;
+    flex-direction: column;
+}
+
+.pass-form .pwd-users label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.pass-form .pwd-users input {
+    margin-right: 5px;
+    transform: scale(0.8); /* Adjust the scale factor to make the checkboxes smaller */
+}
+
+
+
+.pass-form p {
+    margin-bottom: 5px;
+    font-size: small; 
+}
+
+.pass-form span {
+    margin-right: 5px;
+    font-size: x-small; 
+}
+
+.pass-form input[type="number"],
+.pass-form input[type="text"] {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: x-small; 
+}
+
+.pass-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px; 
+    margin-top: 15px;
+}
+
+.history{
+    border-radius: 5px;
+    border: none;
+}
+
+.Regenerate  {
+    font-size: x-small; 
+    flex: 1; 
+    background-color: #ff971D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+.Copy  {
+    font-size: x-small; 
+    flex: 1; 
+    background-color: #fff;
+    color: #ff971D;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#regenerate:hover{
+    background-color: #fff;
+    color: #ff971D;
+}
+
+#copy:hover{
+    background-color: #ff971D;
+    color: #fff;
+}
+
+.pass-form input[type="radio"] {
+    display: none;
+}
+
+.pass-form input[type="radio"] + label {
+    background-color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: x-small; 
+}
+
+
+
+
+
+
+
+/*PASSPHRASE FORM*/
+
+.passphrase-form{
+    font-size: small; /* Adjust the font size for the form */
+    background-color: #26282B;
+    padding: 10px; /* Reduce padding */
+    border-radius: 8px;
+    margin: 20px;
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 180px;
+}
+
+.passphrase-form .pwd-user{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.passphrase-form .pwd-user p {
+    flex: 0 0 calc(33.33% - 10px);
+    margin-right: 5px;
+}
+.passphrase-form .pwd-user input {
+    flex: 1;
+    width: 100%;
+    margin-right: 15px;
+    margin-top: 8px;
+}
+
+.passphrase-form .pwd-user label {
+    flex: 1; 
+    margin-right: 5px; 
+    cursor: pointer;
+    font-size: x-small; 
+}
+
+/* Add this style for the options */
+.passphrase-form .options {
+    margin-bottom: 20px;
+}
+
+.passphrase-form .pwd-users {
+    display: flex;
+    flex-direction: column;
+}
+
+.passphrase-form .pwd-users label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.passphrase-form .pwd-users input {
+    margin-right: 5px;
+    transform: scale(0.8); /* Adjust the scale factor to make the checkboxes smaller */
+}
+
+
+
+.passphrase-form p {
+    margin-bottom: 5px;
+    font-size: small; 
+}
+
+.passphrase-form span {
+    margin-right: 5px;
+    font-size: x-small; 
+}
+.passphrase-form input[type="number"],
+.passphrase-form input[type="text"] {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: x-small; 
+}
+
+.passphrase-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.passphrase-form input[type="radio"] {
+    display: none;
+}
+
+.passphrase-form input[type="radio"] + label {
+    background-color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: x-small; 
+}
+
+
+
+
+/* USERNAME FORM */
+
+.username-form {
+    font-size: small;
+    background-color: #26282B;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px;
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 180px;
+}
+
+.username-form .pwd-user {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.username-form .pwd-user p {
+    flex: 0 0 calc(33.33% - 10px);
+    margin-right: 5px;
+}
+
+.username-form .pwd-user input {
+    flex: 1;
+    width: 100%;
+    margin-right: 15px;
+    margin-top: 8px;
+}
+
+.username-form .pwd-user label {
+    flex: 1;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: x-small;
+}
+
+/* Add this style for the options */
+.username-form .options {
+    margin-bottom: 20px;
+}
+
+.username-form .pwds-users {
+    display: flex;
+    flex-direction: column;
+}
+
+.username-form .pwds-users label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.username-form .pwds-users input {
+    margin-right: 5px;
+    transform: scale(0.8);
+}
+
+.username-form p {
+    margin-bottom: 5px;
+    font-size: small;
+}
+
+.username-form span {
+    margin-right: 5px;
+    font-size: x-small;
+}
+
+.username-form input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: x-small;
+}
+
+.username-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.username-form .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.username-form .history {
+    border-radius: 5px;
+    border: none;
+}
+
+.username-form .Regenerate {
+    font-size: x-small;
+    flex: 1;
+    background-color: #ff971D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.username-form .Copy {
+    font-size: x-small;
+    flex: 1;
+    background-color: #fff;
+    color: #ff971D;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.username-form #regenerate:hover {
+    background-color: #fff;
+    color: #ff971D;
+}
+
+.username-form #copy:hover {
+    background-color: #ff971D;
+    color: #fff;
+}
+
+.username-form input[type="radio"] {
+    display: none;
+}
+
+.username-form input[type="radio"] + label {
+    background-color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: x-small;
+}
+
+
+
+/* USERNAME FORM */
+
+.username-form .usernames {
+    display: flex;
+    flex-direction: column; /* Change from row to column */
+}
+
+.username-form .usernames input {
+    margin-bottom: 18px; /* Add margin between radio buttons */
+}
+
+
+.username-form input[type="radio"] + label:hover,
+.passphrases-form input[type="radio"] + label:hover,
+.pass-form input[type="radio"] + label:hover  {
+    background-color: #ff971D;
+
+}
+
+
+
+
+.user-icon {
+    position: fixed;
+    top: 65px;
+    right: 50px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.user-menu{
+    display: none;
+    position: absolute;
+    background-color: #101113;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    margin-top: 130px;
+    margin-left: 90%;
+    width: 130px;
+    font-size: small;
+}
+.user-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-menu ul li {
+    padding: 8px 0;
+}
+
+.user-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+
+.user-menu ul li a img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1); 
+}
+
+
+.lock-and-title {
+    display: flex;
+    align-items: center;
+    margin-right: 160px; 
+}
+
+.lock-image {
+    filter: invert(43%) sepia(96%) saturate(364%) hue-rotate(352deg) brightness(100%) contrast(80%); /* Orange color filter */
+    margin-right: 10px; 
+    width: 50px; 
+    height: auto; 
+}
+
+.lock-and-title .lock-image {
+    order: -1; 
+}
+
+.lock-and-title h2, .lock-and-title h3 {
+    margin: 0; 
+    line-height: 1.2; 
+    white-space: nowrap; 
+}
+
+.privy-title {
+    color: #ff971D;
+    display: block;
+}
+
+.manager-title{
+    color: #fff;
+    display: block;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .sidebar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .add {
+        margin-right: 0;
+    }
+
+    .create-btn {
+        width: 80px;
+        font-size: smaller;
+    }
+
+    .header {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header::after {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-box input[type="text"] {
+        width: 100%;
+    }
+
+    .text-row {
+        position: static;
+        padding: 10px;
+    }
+
+    .text-content {
+        margin-bottom: 0;
+    }
+
+    .user-icon {
+        position: static;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}
