@@ -79,7 +79,7 @@
             <input type="number" name="address[postalCode]" placeholder="Enter postal code" required />
           </div>
         </div>
-        <button>Submit</button>
+        <button type="button" onclick="submitForm()">Submit</button>
       </form>
     </section>
 
@@ -100,7 +100,48 @@
 
     // Set the generated key to the hidden input field
     document.getElementById('generatedCodeInput').value = generatedKey;
+
+    localStorage.setItem('generatedKey', generatedKey);
   }
+
+
+  function submitForm() {
+    // Retrieve form data
+    const formData = {
+        fullName: document.getElementsByName('fullName')[0].value,
+        reserveEmail: document.getElementsByName('reserveEmail')[0].value,
+        phoneNumber: document.getElementsByName('phoneNumber')[0].value,
+        birthDate: document.getElementsByName('birthDate')[0].value,
+        gender: getCheckedRadioValue('gender'),
+        code: document.getElementsByName('code')[0].value,
+        address: {
+            streetAddress: document.getElementsByName('address[streetAddress]')[0].value,
+            country: document.getElementsByName('address[country]')[0]?.value || '',
+            city: document.getElementsByName('address[city]')[0]?.value || '',
+            region: document.getElementsByName('address[region]')[0]?.value || '',
+            postalCode: document.getElementsByName('address[postalCode]')[0]?.value || '',
+        },
+    };
+
+    // Save form data to localStorage
+    localStorage.setItem('formData', JSON.stringify(formData));
+
+    // Redirect to '/main'
+    window.location.href = 'main.html';
+}
+
+
+function getCheckedRadioValue(name) {
+    const radioButtons = document.getElementsByName(name);
+    const checkedRadioButton = Array.from(radioButtons).find(radio => radio.checked);
+    return checkedRadioButton ? checkedRadioButton.value : null;
+}
+
+
+
+
+
+
   </script>
   </body>
 </html>
