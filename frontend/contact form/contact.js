@@ -6,7 +6,6 @@ const phone = document. getElementById ("phone");
 const subject = document. getElementById("subject");
 const mess = document. getElementById( "message");
 
-    
 function sendEmail(){
 
     const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}`;
